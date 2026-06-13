@@ -1,1 +1,279 @@
 
+<!DOCTYPE html>
+<html lang='zh-Hant'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+<title>廣州8天7夜｜手機版旅行手冊</title>
+<style>
+:root{
+  --bg:#f6f7fb; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
+  --blue:#2563eb; --cyan:#06b6d4; --orange:#f97316; --green:#16a34a;
+  --line:#e5e7eb; --soft:#eef6ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft JhengHei",Arial,sans-serif;
+  line-height:1.55; padding-bottom:72px;
+}
+.hero{
+  background:linear-gradient(135deg,#1d4ed8 0%,#06b6d4 100%);
+  color:#fff; padding:26px 18px 22px; border-radius:0 0 26px 26px;
+  box-shadow:0 8px 24px rgba(37,99,235,.25);
+}
+.hero h1{font-size:25px; margin:0 0 8px; letter-spacing:.5px}
+.hero p{margin:4px 0; opacity:.95; font-size:14px}
+.badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+.badge{background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.28); padding:7px 10px; border-radius:999px; font-size:13px}
+.container{max-width:720px; margin:0 auto; padding:14px}
+.quick{
+  display:flex; gap:8px; overflow-x:auto; padding:4px 0 10px; position:sticky; top:0; z-index:10;
+  background:linear-gradient(var(--bg) 82%, rgba(246,247,251,0));
+}
+.quick a{
+  flex:0 0 auto; text-decoration:none; color:#174ea6; background:#fff; border:1px solid var(--line);
+  padding:8px 11px; border-radius:999px; font-weight:700; font-size:13px;
+  box-shadow:0 2px 8px rgba(15,23,42,.05);
+}
+.info-grid{display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0 14px}
+.info{
+  background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px 15px;
+  box-shadow:0 4px 14px rgba(15,23,42,.05);
+}
+.info b{display:block; color:#174ea6; margin-bottom:4px}
+.day-card{
+  background:var(--card); border:1px solid var(--line); border-radius:24px;
+  margin:16px 0; overflow:hidden; box-shadow:0 6px 20px rgba(15,23,42,.06);
+}
+.day-head{
+  padding:16px; background:linear-gradient(135deg,#eff6ff,#ecfeff);
+  border-bottom:1px solid var(--line);
+}
+.day-kicker{font-weight:800; color:var(--blue); font-size:14px; margin-bottom:4px}
+.day-title{font-size:20px; font-weight:900; margin:0 0 8px}
+.theme{font-size:13px; color:#475569; background:#fff; display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--line)}
+.hotel{
+  padding:10px 16px; font-size:14px; background:#fff7ed; border-bottom:1px solid #fed7aa;
+  color:#9a3412; font-weight:800;
+}
+.timeline{padding:8px 14px 14px}
+.item{display:grid; grid-template-columns:86px 1fr; gap:10px; padding:12px 0; border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.time{
+  font-weight:900; color:#0f766e; font-size:13px; line-height:1.35; padding-top:2px;
+}
+.plan{font-weight:800; font-size:15px}
+.note{color:var(--muted); font-size:13px; margin-top:3px}
+.highlight{
+  background:#fff7ed; border:1px solid #fdba74; border-radius:14px; padding:10px; margin:6px 0;
+}
+.section-title{
+  margin:20px 0 8px; font-size:18px; font-weight:900; color:#111827;
+}
+.checklist{
+  background:#fff; border:1px solid var(--line); border-radius:20px; padding:14px 16px;
+  box-shadow:0 4px 14px rgba(15,23,42,.05);
+}
+.checklist ul{margin:8px 0 0; padding-left:20px}
+.checklist li{margin:7px 0}
+.bottom-nav{
+  position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--line);
+  display:flex; justify-content:space-around; padding:8px 6px env(safe-area-inset-bottom);
+  box-shadow:0 -4px 18px rgba(15,23,42,.08); z-index:20;
+}
+.bottom-nav a{text-decoration:none; color:#2563eb; font-size:12px; font-weight:800; text-align:center}
+@media(min-width:760px){
+  .info-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:32px}
+}
+@media print{
+  body{background:#fff; padding-bottom:0}
+  .quick,.bottom-nav{display:none}
+  .day-card{break-inside:avoid; box-shadow:none}
+}
+</style>
+</head>
+<body>
+<header class='hero' id='top'>
+<h1>廣州 8天7夜旅行手冊</h1>
+<p>2026/07/11（六）～07/18（六）｜4人同行</p>
+<p>長隆＋滑雪＋廣州塔＋珠江夜遊</p>
+<div class='badges'><span class='badge'>🎿 自備雪板雪鞋</span><span class='badge'>🏨 花間堂含早餐＋初級雪票</span><span class='badge'>📱 手機版</span></div>
+</header>
+<main class='container'>
+<nav class='quick'>
+<a href='#day1'>D1</a>
+<a href='#day2'>D2</a>
+<a href='#day3'>D3</a>
+<a href='#day4'>D4</a>
+<a href='#day5'>D5</a>
+<a href='#day6'>D6</a>
+<a href='#day7'>D7</a>
+<a href='#day8'>D8</a>
+</nav>
+<section class='info-grid' id='summary'>
+<div class='info'><b>✈️ 航班</b>7/11 CI521 台北→廣州 14:10–16:15<br>7/18 CI522 廣州→台北 17:30–19:40</div>
+<div class='info'><b>🏨 住宿</b>7/11–7/13 宜致飯店（長隆）<br>7/13–7/18 廣州融創花間堂·悅雪</div>
+<div class='info'><b>🎿 滑雪</b>7/14、7/16 10:30–13:30 教練課<br>其他時間使用初級雪票自由滑</div>
+<div class='info'><b>⭐ 重點</b>Day1 珠江夜遊｜Day5 廣州塔460摩天輪｜7/13、7/15、7/17 按摩</div>
+</section>
+<section class='day-card' id='day1'>
+<div class='day-head'>
+<div class='day-kicker'>Day 1｜7/11（六）</div>
+<h2 class='day-title'>抵達廣州＋珠江夜景</h2>
+<div class='theme'>✈️ 抵達｜🌃 夜景｜🚢 遊江</div>
+</div>
+<div class='hotel'>🏨 住宿：宜致飯店（廣州長隆野生動物世界店）</div>
+<div class='timeline'>
+<div class='item'>
+<div class='time'>14:10–16:15</div>
+<div><div class='plan'>✈️ CI521 台北 → 廣州</div><div class='note'>飛機餐</div></div>
+</div>
+<div class='item'>
+<div class='time'>16:15–18:00</div>
+<div><div class='plan'>🚗 白雲機場 → 長隆飯店入住</div><div class='note'>車程約60分鐘</div></div>
+</div>
+<div class='item'>
+<div class='time'>18:30</div>
+<div><div class='plan'>🍽 炳勝品味（珠江新城店）</div><div class='note'>燒鵝、黑叉燒、脆皮乳鴿</div></div>
+</div>
+<div class='item'>
+<div class='time'>19:50</div>
+<div><div class='plan'>🌃 花城廣場散步</div><div class='note'>自由甜點</div></div>
+</div>
+<div class='item'>
+<div class='time'>20:20</div>
+<div><div class='plan'>📸 廣州塔外拍（不上塔）</div><div class='note'>拍夜景</div></div>
+</div>
+<div class='item highlight'>
+<div class='time'>21:00–22:00</div>
+<div><div class='plan'>🚢 珠江夜遊（廣州塔碼頭）</div><div class='note'>約60分鐘</div></div>
+</div>
+<div class='item'>
+<div class='time'>22:20</div>
+<div><div class='plan'>🚗 返回長隆飯店</div><div class='note'>車程約40分鐘</div></div>
+</div>
+</div></section>
+<section class='day-card' id='day2'>
+<div class='day-head'>
+<div class='day-kicker'>Day 2｜7/12（日）</div>
+<h2 class='day-title'>長隆野生動物世界＋國際大馬戲</h2>
+<div class='theme'>🦁 動物園｜🎪 大馬戲</div>
+</div>
+<div class='hotel'>🏨 住宿：宜致飯店（廣州長隆野生動物世界店）</div>
+<div class='timeline'>
+<div class='item'>
+<div class='time'>早餐</div>
+<div><div class='plan'>🍳 飯店早餐</div><div class='note'>宜致飯店</div></div>
+</div>
+<div class='item'>
+<div class='time'>09:30–16:30</div>
+<div><div class='plan'>🦁 長隆野生動物世界</div><div class='note'>園區內簡餐</div></div>
+</div>
+<div class='item'>
+<div class='time'>17:30</div>
+<div><div class='plan'>🍽 大鴿飯</div><div class='note'>紅燒乳鴿、招牌大鴿飯</div></div>
+</div>
+<div class='item'>
+<div class='time'>20:00–21:00</div>
+<div><div class='plan'>🎪 長隆國際大馬戲</div><div class='note'>已安排活動</div></div>
+</div>
+</div></section>
+<section class='day-card' id='day3'>
+<div class='day-head'>
+<div class='day-kicker'>Day 3｜7/13（一）</div>
+<h2 class='day-title'>寄放雪具＋融創樂園＋攝影＋按摩</h2>
+<div class='theme'>🧳 寄放雪具｜🎡 樂園｜📷 攝影｜💆 按摩</div>
+</div>
+<div class='hotel'>🏨 住宿：廣州融創花間堂·悅雪</div>
+<div class='timeline'>
+<div class='item'>
+<div class='time'>早餐</div>
+<div><div class='plan'>🍳 飯店早餐＋退房</div><div class='note'>宜致飯店</div></div>
+</div>
+<div class='item'>
+<div class='time'>09:30</div>
+<div><div class='plan'>🚗 長隆 → 花都，先寄放雪具</div><div class='note'>約70分鐘</div></div>
+</div>
+<div class='item'>
+<div class='time'>11:30</div>
+<div><div class='plan'>🍽 點都德（環市東店）</div><div class='note'>紅米腸、牛肉腸粉</div></div>
+</div>
+<div class='item'>
+<div class='time'>13:00–14:20</div>
+<div><div class='plan'>🎡 廣州融創樂園</div><div class='note'>輕鬆玩、拍照</div></div>
+</div>
+<div class='item'>
+<div class='time'>15:00</div>
+<div><div class='plan'>📷 谷缦摄影</div><div class='note'>天河區</div></div>
+</div>
+<div class='item'>
+<div class='time'>18:30</div>
+<div><div class='plan'>🍽 探魚（融創茂）</div><div class='note'>香辣烤魚</div></div>
+</div>
+<div class='item'>
+<div class='time'>20:00</div>
+<div><div class='plan'>💆 按摩</div><div class='note'>飯店附近</div></div>
+</div>
+</div></section>
+<section class='day-card' id='day4'>
+<div class='day-head'>
+<div class='day-kicker'>Day 4｜7/14（二）</div>
+<h2 class='day-title'>滑雪教練課①</h2>
+<div class='theme'>🎿 教練課｜🍲 火鍋</div>
+</div>
+<div class='hotel'>🏨 住宿：廣州融創花間堂·悅雪</div>
+<div class='timeline'>
+<div class='item'>
+<div class='time'>早餐</div>
+<div><div class='plan'>🍳 花間堂早餐</div><div class='note'>現煮麵、雞蛋</div></div>
+</div>
+<div class='item'>
+<div class='time'>10:30–13:30</div>
+<div><div class='plan'>🎿 滑雪教練課</div><div class='note'>3小時</div></div>
+</div>
+<div class='item'>
+<div class='time'>午餐</div>
+<div><div class='plan'>🍽 八合里牛肉火鍋（融創茂）</div><div class='note'>吊龍、胸口朥、牛肉丸</div></div>
+</div>
+<div class='item'>
+<div class='time'>下午</div>
+<div><div class='plan'>☕ 商場休息</div><div class='note'>咖啡、放鬆</div></div>
+</div>
+<div class='item'>
+<div class='time'>晚餐</div>
+<div><div class='plan'>🍽 太二酸菜魚（融創茂）</div><div class='note'>酸菜魚、炸饅頭</div></div>
+</div>
+</div></section>
+<section class='day-card' id='day5'>
+<div class='day-head'>
+<div class='day-kicker'>Day 5｜7/15（三）</div>
+<h2 class='day-title'>自由滑＋選片＋廣州塔摩天輪</h2>
+<div class='theme'>🎿 自由滑｜📷 選片｜🎡 廣州塔夕陽夜景｜💆 按摩</div>
+</div>
+<div class='hotel'>🏨 住宿：廣州融創花間堂·悅雪</div>
+<div class='timeline'>
+<div class='item'>
+<div class='time'>早餐</div>
+<div><div class='plan'>🍳 花間堂早餐</div><div class='note'>飯店</div></div>
+</div>
+<div class='item'>
+<div class='time'>09:30–12:00</div>
+<div><div class='plan'>🎿 自由滑</div><div class='note'>不要滑太久</div></div>
+</div>
+<div class='item'>
+<div class='time'>午餐</div>
+<div><div class='plan'>🍽 融創茂簡餐</div><div class='note'>輕食</div></div>
+</div>
+<div class='item'>
+<div class='time'>14:30</div>
+<div><div class='plan'>🚗 前往天河選片</div><div class='note'>約60分鐘</div></div>
+</div>
+<div class='item'>
+<div class='time'>17:30</div>
+<div><div class='plan'>🍽 炳勝私廚</div><div class='note'>黑叉燒、菠蘿包</div></div>
+</div>
+<div class='item'>
+<div class=
